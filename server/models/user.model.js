@@ -1,0 +1,24 @@
+const mongoose = require('mongoose');
+
+const UserSchema = mongoose.Schema({
+  username: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  description: { type: String, default: '' },
+  baseLocation: { type: String, default: '' },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: null },
+});
+
+UserSchema.statics.findAll = function findAll(cb) {
+  return this.find({}, cb);
+};
+
+UserSchema.statics.validateLogin = function validateLogin(reqCredential, cb) {
+  return this.find({
+    email: reqCredential.email,
+    password: reqCredential.password,
+  }, cb);
+};
+
+module.exports = mongoose.model('User', UserSchema);
