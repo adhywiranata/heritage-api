@@ -14,7 +14,6 @@ exports.createNewUser = (req, res) => {
 
 exports.validateLogin = (req, res) => {
   UserModel.validateLogin(req.body, (err, valid) => {
-    console.log(valid);
     if (valid) {
       res.sendStatus(200);
     } else {
