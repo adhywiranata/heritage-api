@@ -1,5 +1,5 @@
-var express = require('express');
-var placesRoutes = require('./places.route');
+const express = require('express');
+const placesRoutes = require('./places.route');
 
 const router = express.Router();
 

@@ -1,7 +1,7 @@
-var PlaceModel = require('../models/place.model');
+const PlaceModel = require('../models/place.model');
 
-exports.getPlaces = function(req, res) {
-  PlaceModel.findAll(function(err, places) {
+exports.getPlaces = (req, res) => {
+  PlaceModel.findAll((err, places) => {
     res.send(places);
   });
-}
+};

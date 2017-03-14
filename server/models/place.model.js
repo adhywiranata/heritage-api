@@ -1,12 +1,12 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/heritageDB');
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', () => {
-  console.log('err');
+  // console.log('err');
 });
 db.once('open', () => {
-  console.log('connected to heritageDB');
+  // console.log('connected to heritageDB');
 });
 
 const PlaceSchema = mongoose.Schema({
@@ -18,13 +18,13 @@ const PlaceSchema = mongoose.Schema({
   user: { type: String, required: true },
   views: { type: Number, default: 0 },
   likes: { type: Number, default: 0 },
-  tags: [ String ],
+  tags: [String],
   createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: null }
+  updatedAt: { type: Date, default: null },
 });
 
-PlaceSchema.statics.findAll = function(cb) {
+PlaceSchema.statics.findAll = function findAll(cb) {
   return this.find({}, cb);
-}
+};
 
 module.exports = mongoose.model('Place', PlaceSchema);
