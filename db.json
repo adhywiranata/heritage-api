@@ -1,0 +1,139 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "title": "Awesome Borobudur Temple",
+      "description": "Borobudur is a 9th-century Mahayana Buddhist temple in Magelang, Central Java, Indonesia, as well as the world's largest Buddhist temple, and also one of the greatest Buddhist monuments in the world.",
+      "photoUrl": "http://anekatempatwisata.com/wp-content/uploads/2014/10/Candi-Borobudur-3.jpg",
+      "location": "Central Java, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 513,
+      "likes": 100,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 2,
+      "title": "Candi Prambanan Visitation",
+      "description": "Candi Prambanan or Candi Rara Jonggrang is a 9th-century Hindu temple compound in Central Java, Indonesia, dedicated to the Trimurti, the expression of God as the Creator (Brahma), the Preserver (Vishnu) and the Destroyer (Shiva).",
+      "photoUrl": "http://wisataterbaru.com/wp-content/uploads/2016/09/tiket-masuk-candi-prambanan.jpg",
+      "location": "Central Java, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 213,
+      "likes": 15,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 3,
+      "title": "Museum at the Heart of Jakarta",
+      "description": "The National Museum of Indonesia (Indonesian: Museum Nasional), is an archeological, historical, ethnological, and geographical museum located in Jalan Medan Merdeka Barat, Central Jakarta, right on the west side of Merdeka Square.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Museum_Nasional_Indonesia.jpg",
+      "location": "Jakarta, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 312,
+      "likes": 54,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 4,
+      "title": "Sunset on Top of Borobudur",
+      "description": "Borobudur is a 9th-century Mahayana Buddhist temple in Magelang, Central Java, Indonesia, as well as the world's largest Buddhist temple, and also one of the greatest Buddhist monuments in the world.",
+      "photoUrl": "https://rifkymedia.files.wordpress.com/2010/01/borobudur1.jpg",
+      "location": "Central Java, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 87,
+      "likes": 15,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 5,
+      "title": "Great Foods, Great Houses",
+      "description": "Rumah gadang or rumah bagonjong are the traditional homes of the Minangkabau. The architecture, construction, internal and external decoration, and the functions of the house reflect the culture and values of the Minangkabau.",
+      "photoUrl": "http://2.bp.blogspot.com/-mLolDCSOZzQ/T4rfQB7i81I/AAAAAAAACjk/xPlDUKMUUwc/s1600/Pagaruyung.jpg",
+      "location": "West Sumatra, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 432,
+      "likes": 149,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 6,
+      "title": "Bali Trip!",
+      "description": "Bali is an island and province of Indonesia. The province includes the island of Bali and a few smaller neighbouring islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan.",
+      "photoUrl": "https://thegoldenscopeit.files.wordpress.com/2014/08/abali-tempio-sullacqua.jpg",
+      "location": "Bali, Indonesia",
+      "user": "Budi Nur Cahyo",
+      "views": 80,
+      "likes": 4,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    }
+  ],
+  "foods": [
+    {
+      "id": 1,
+      "title": "Nasi Rendang Padang",
+      "description": "lorem ipsum dolor sit amet",
+      "photoUrl": "https://static.qraved.co/images/journal/data/2016/05/23/sariratu.jpg",
+      "location": "Magelang, Jawa Tengah",
+      "user": "Budi Nur Cahyo",
+      "likes": 100,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 2,
+      "title": "Nasi Bali",
+      "description": "lorem ipsum dolor sit amet",
+      "photoUrl": "http://3.bp.blogspot.com/-0U9lYmY21is/VXE07LPngGI/AAAAAAAACCg/8VghbalcLj4/s1600/nasi%2Bbali%2Blengkap.jpg",
+      "location": "Magelang, Jawa Tengah",
+      "user": "Budi Nur Cahyo",
+      "likes": 100,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    },
+    {
+      "id": 3,
+      "title": "Orek Tempe",
+      "description": "lorem ipsum dolor sit amet",
+      "photoUrl": "http://www.bango.co.id/gfx/recipes/61.jpg",
+      "location": "Magelang, Jawa Tengah",
+      "user": "Budi Nur Cahyo",
+      "views": 513,
+      "likes": 100,
+      "tags": [
+        "heritage", "indonesia", "buddhism", "travel"
+      ],
+      "createdAt": "Fri Mar 10 2017 19:51:49 GMT+0700 (WIB)",
+      "updatedAt": null,
+    }
+  ]
+}
