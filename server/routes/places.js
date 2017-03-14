@@ -1,3 +1,5 @@
+var PlaceModel = require('../models/place.model');
+
 var placesData = [
   {
     "id": 1,
@@ -90,6 +92,12 @@ var placesData = [
     "updatedAt": null,
   }
 ];
+
+exports.findAllDB = (req, res) => {
+  PlaceModel.findAll(function(err, places) {
+    res.send(places);
+  });
+}
 
 exports.findAll = (req, res) => {
   res.send(placesData);
