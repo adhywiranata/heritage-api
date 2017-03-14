@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const UserSchema = mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, required: true },
-  password: { type: String, required: true, select: false },
+  password: { type: String, required: true },
   firstName: { type: String, required: true },
   lastName: { type: String, default: '' },
   description: { type: String, default: '' },
@@ -17,15 +18,23 @@ UserSchema.statics.findAll = function findAll(cb) {
 };
 
 UserSchema.statics.validateLogin = function validateLogin(reqCredential, cb) {
-  return this.find({
-    email: reqCredential.email,
-    password: reqCredential.password,
-  }, cb);
+  const userCredential = Object.assign({}, reqCredential);
+  return this.findOne({
+    email: userCredential.email,
+  }, (err, user) => {
+    if (err) { return false; }
+    if (!user) { return false; }
+    bcrypt.compare(userCredential.password, user.password, cb);
+    return true;
+  });
 };
 
 UserSchema.statics.createUser = function createUser(reqUser, cb) {
-  console.log('tessst');
-  return this.create(reqUser, cb);
+  const newUser = Object.assign({}, reqUser);
+  bcrypt.hash(newUser.password, 10, (err, hash) => {
+    newUser.password = hash;
+    return this.create(newUser, cb);
+  });
 };
 
 module.exports = mongoose.model('User', UserSchema);

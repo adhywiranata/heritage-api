@@ -7,4 +7,7 @@ router.route('/')
   .get(UserController.getAllUsers)
   .post(UserController.createNewUser);
 
+router.route('/login')
+  .post(UserController.validateLogin);
+
 module.exports = router;
