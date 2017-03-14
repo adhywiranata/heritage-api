@@ -35,4 +35,9 @@ PlaceSchema.statics.createNewPlace = function createNewPlace(reqPlace, cb) {
   return this.create(reqPlace, cb);
 };
 
+PlaceSchema.statics.updatePlaceById = function updatePlaceById(reqId, reqPlace, cb) {
+  const options = {};
+  return this.findOneAndUpdate({ id: reqId }, reqPlace, options, cb);
+};
+
 module.exports = mongoose.model('Place', PlaceSchema);
