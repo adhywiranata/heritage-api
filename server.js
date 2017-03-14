@@ -95,8 +95,12 @@ var placesData = [
   }
 ];
 
-app.get('/places', function(req, res) {
+app.get('/places', (req, res) => {
   res.send(placesData);
+});
+
+app.get('/places/:id', (req, res) => {
+  res.send(placesData.filter(place => place.id === Number(req.params.id)));
 });
 
 app.listen(1234);
