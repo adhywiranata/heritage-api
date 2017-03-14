@@ -4,6 +4,8 @@ const UserSchema = mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
+  firstName: { type: String, required: true },
+  lastName: { type: String, default: '' },
   description: { type: String, default: '' },
   baseLocation: { type: String, default: '' },
   createdAt: { type: Date, default: Date.now },
@@ -19,6 +21,10 @@ UserSchema.statics.validateLogin = function validateLogin(reqCredential, cb) {
     email: reqCredential.email,
     password: reqCredential.password,
   }, cb);
+};
+
+UserSchema.statics.createUser = function createUser(reqUser, cb) {
+  return this.create(reqUser, cb);
 };
 
 module.exports = mongoose.model('User', UserSchema);
