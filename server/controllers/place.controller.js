@@ -17,3 +17,9 @@ exports.createNewPlace = (req, res) => {
     res.send(result);
   });
 };
+
+exports.updatePlaceById = (req, res) => {
+  PlaceModel.updatePlaceById(req.params.id, req.body, (err, result) => {
+    res.send(result);
+  });
+};
