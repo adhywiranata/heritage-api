@@ -1,12 +1,8 @@
 var express = require('express');
-var PlaceModel = require('../models/place.model');
+var PlaceController = require('../controllers/place.controller');
 
 const router = express.Router();
 
-router.route('/').get((req, res) => {
-  PlaceModel.findAll(function(err, places) {
-    res.send(places);
-  });
-});
+router.route('/').get(PlaceController.getPlaces);
 
 module.exports = router;
