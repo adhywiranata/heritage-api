@@ -9,6 +9,7 @@ router.route('/')
 
 router.route('/:id')
   .get(PlaceController.getPlaceById)
-  .put(PlaceController.updatePlaceById);
+  .put(PlaceController.updatePlaceById)
+  .delete(PlaceController.removePlaceById);
 
 module.exports = router;
