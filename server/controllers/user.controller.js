@@ -5,3 +5,9 @@ exports.getAllUsers = (req, res) => {
     res.send(result);
   });
 };
+
+exports.createNewUser = (req, res) => {
+  UserModel.createUser(req.body, (err, result) => {
+    res.send(result);
+  });
+};

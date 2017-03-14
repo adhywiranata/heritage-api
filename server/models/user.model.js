@@ -24,6 +24,7 @@ UserSchema.statics.validateLogin = function validateLogin(reqCredential, cb) {
 };
 
 UserSchema.statics.createUser = function createUser(reqUser, cb) {
+  console.log('tessst');
   return this.create(reqUser, cb);
 };
 
