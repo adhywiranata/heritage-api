@@ -1,14 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/heritageDB');
-const db = mongoose.connection;
-db.on('error', () => {
-  // console.log('err');
-});
-db.once('open', () => {
-  // console.log('connected to heritageDB');
-});
-
 const PlaceSchema = mongoose.Schema({
   id: { type: Number, required: true },
   title: { type: String, required: true },
