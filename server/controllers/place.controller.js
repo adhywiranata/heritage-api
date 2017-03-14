@@ -23,3 +23,9 @@ exports.updatePlaceById = (req, res) => {
     res.send(result);
   });
 };
+
+exports.removePlaceById = (req, res) => {
+  PlaceModel.removePlaceById(req.params.id, (err, result) => {
+    res.send(result);
+  });
+};
