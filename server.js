@@ -20,3 +20,21 @@ db.on('error', () => {
 db.once('open', () => {
   console.log('connected to heritageDB');
 });
+
+
+
+var placeSchema = mongoose.Schema({
+  id: Number,
+  title: String,
+  description: String,
+  photoUrl: String,
+  location: String,
+  user: String,
+  views: Number,
+  likes: Number,
+  tags: [
+    String,
+  ],
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: null }
+});
