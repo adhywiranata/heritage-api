@@ -27,4 +27,12 @@ PlaceSchema.statics.findAll = function findAll(cb) {
   return this.find({}, cb);
 };
 
+PlaceSchema.statics.findById = function findById(reqId, cb) {
+  return this.findOne({ id: reqId }, cb);
+};
+
+PlaceSchema.statics.createNewPlace = function createNewPlace(reqPlace, cb) {
+  return this.create(reqPlace, cb);
+};
+
 module.exports = mongoose.model('Place', PlaceSchema);

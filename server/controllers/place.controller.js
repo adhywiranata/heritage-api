@@ -5,3 +5,9 @@ exports.getPlaces = (req, res) => {
     res.send(places);
   });
 };
+
+exports.getPlaceById = (req, res) => {
+  PlaceModel.findById(req.params.id, (err, places) => {
+    res.send(places);
+  });
+};
