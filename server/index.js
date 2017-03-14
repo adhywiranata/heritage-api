@@ -21,20 +21,26 @@ db.once('open', () => {
   console.log('connected to heritageDB');
 });
 
-
-
-var placeSchema = mongoose.Schema({
-  id: Number,
-  title: String,
-  description: String,
-  photoUrl: String,
-  location: String,
-  user: String,
-  views: Number,
-  likes: Number,
-  tags: [
-    String,
-  ],
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: null }
+// Get all Places
+var Place = mongoose.model('Place', placeSchema);
+Place.find().then((places) => {
+  console.log(places);
 });
+
+// Add new Place
+var newlyAddedPlace = new Place({
+  id: 7,
+  title: 'lorem',
+  description: 'ipsum',
+  photoUrl: null,
+  location: '',
+  user: 'X',
+  views: 0,
+  likes: 0,
+  tags: ['test', 'test2']
+});
+
+// newlyAddedPlace.save((err, newlyAddedPlace) => {
+//   if (err) return console.error(err);
+//   console.log('added!');
+// });
