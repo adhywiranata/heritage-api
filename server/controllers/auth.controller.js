@@ -1,3 +1,10 @@
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const config = require('../../config');
+
+const app = express();
+app.set('superSecret', config.secret);
+
 const UserModel = require('../models/user.model');
 
 exports.createNewUser = (req, res) => {
@@ -7,9 +14,16 @@ exports.createNewUser = (req, res) => {
 };
 
 exports.validateLogin = (req, res) => {
-  UserModel.validateLogin(req.body, (err, valid) => {
+  UserModel.validateLogin(req.body, (err, valid, user) => {
     if (valid) {
-      res.sendStatus(200);
+      const token = jwt.sign(user, app.get('superSecret'), {
+        expiresIn: 20,
+      });
+      res.json({
+        success: true,
+        message: 'here\'s the token',
+        token,
+      });
     } else {
       res.sendStatus(403);
     }
