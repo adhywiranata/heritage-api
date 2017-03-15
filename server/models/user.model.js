@@ -24,7 +24,9 @@ UserSchema.statics.validateLogin = function validateLogin(reqCredential, cb) {
   }, (err, user) => {
     if (err) { return false; }
     if (!user) { return false; }
-    bcrypt.compare(userCredential.password, user.password, cb);
+    bcrypt.compare(userCredential.password,
+      user.password,
+      (errInner, valid) => cb(errInner, valid, user));
     return true;
   });
 };
