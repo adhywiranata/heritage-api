@@ -17,7 +17,7 @@ exports.validateLogin = (req, res) => {
   UserModel.validateLogin(req.body, (err, valid, user) => {
     if (valid) {
       const token = jwt.sign(user, app.get('superSecret'), {
-        expiresIn: 20,
+        expiresIn: 200,
       });
       res.json({
         success: true,
