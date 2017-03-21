@@ -10,12 +10,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-if (process.env.NODE_ENV !== 'test') {
-  // use morgan to log at command line
-  console.log('this is not test');
-  app.use(morgan('combined')); // 'combined' outputs the Apache style LOGs
-  // app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV !== 'test') {
+//   // use morgan to log at command line
+//   console.log('this is not test');
+//   app.use(morgan('combined')); // 'combined' outputs the Apache style LOGs
+//   // app.use(morgan('dev'));
+// }
 
 mongoose.connect(config.database);
 const db = mongoose.connection;

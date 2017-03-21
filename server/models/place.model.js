@@ -31,6 +31,10 @@ PlaceSchema.statics.updatePlaceById = function updatePlaceById(reqId, reqPlace, 
   return this.findOneAndUpdate({ id: reqId }, reqPlace, options, cb);
 };
 
+PlaceSchema.statics.removeAll = function removeAll(condition, cb) {
+  return this.remove(condition, cb);
+};
+
 PlaceSchema.statics.removePlaceById = function deletePlaceById(reqId, cb) {
   return this.findOneAndRemove({ id: reqId }, cb);
 };
