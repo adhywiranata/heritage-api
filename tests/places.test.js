@@ -30,5 +30,33 @@ describe('Places', () => {
           done();
         });
     });
+
+    it('it should POST new place', (done) => {
+      const newPlace = {
+        id: 10,
+        title: 'test',
+        description: 'testdesc',
+        photoUrl: 'asdasd',
+        location: 'asdasd',
+        user: 'iasd',
+      };
+
+      chai.request(server)
+        .post('/api/places')
+        .send(newPlace)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          chai.request(server)
+            .get('/api/places')
+            .end((err, res) => {
+              res.should.have.status(200);
+              res.body.should.be.a('array');
+              res.body.length.should.be.eql(1);
+              res.body[0].title.should.be.eql(newPlace.title);
+              done();
+            });
+        });
+    });
   });
 });
