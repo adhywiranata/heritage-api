@@ -3,10 +3,13 @@ node_js:
   - 7
 env:
   - CXX=g++-4.8
-
+services:
+  - mongodb
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+# before_script:
+#  - mongo heritageDB_test --eval 'db.addUser("travis", "test");'
